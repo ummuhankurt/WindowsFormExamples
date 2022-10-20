@@ -33,6 +33,6 @@ namespace PullFromDatabase
             dataGridView1.DataSource = table;
             baglanti.Close();
             MessageBox.Show("Geldi");
-        }
+        }  
     }
 }
