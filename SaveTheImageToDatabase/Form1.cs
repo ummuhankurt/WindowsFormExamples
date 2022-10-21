@@ -30,18 +30,24 @@ namespace SaveTheImageToDatabase
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (btnGirisYap.Enabled)
+            {
+                baglanti.Open();
+                SqlCommand komut = new SqlCommand("insert into Filmler (FilmAd, Tur,FilmPuan,FilmKategori,FilmResim) values (@p1,@p2,@p3,@p4,@p5)", baglanti);
+                komut.Parameters.AddWithValue("@p1", TxtAd.Text);
+                komut.Parameters.AddWithValue("@p2", TxtTur.Text);
+                komut.Parameters.AddWithValue("@p3", TxtPuan.Text);
+                komut.Parameters.AddWithValue("@p4", TxtKategori.Text);
+                komut.Parameters.AddWithValue("@p5", TxtResimPath.Text);
+                komut.ExecuteNonQuery();
+                baglanti.Close();
+                MessageBox.Show("Kayıt Eklendi");
+            }
 
-            baglanti.Open();
-            SqlCommand komut = new SqlCommand("insert into Filmler (FilmAd, Tur,FilmPuan,FilmKategori,FilmResim) values (@p1,@p2,@p3,@p4,@p5)", baglanti);
-            komut.Parameters.AddWithValue("@p1", TxtAd.Text);
-            komut.Parameters.AddWithValue("@p2", TxtTur.Text);
-            komut.Parameters.AddWithValue("@p3", TxtPuan.Text);
-            komut.Parameters.AddWithValue("@p4", TxtKategori.Text);
-            komut.Parameters.AddWithValue("@p5", TxtResimPath.Text);
-            komut.ExecuteNonQuery();
-            baglanti.Close();
-            MessageBox.Show("Kayıt Eklendi");
-
+            else
+            {
+                MessageBox.Show("Giriş yapınız");
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -55,37 +61,38 @@ namespace SaveTheImageToDatabase
             baglanti.Close();
         }
 
-        //private void button2_Click(object sender, EventArgs e)
-        //{
-            
-        //    SqlCommand komut = new SqlCommand("Update Filmler Set FilmAd = @p1,Tur = @p2, FilmPuan=@p3, FilmKategori=@p4 ,FilmResim = @p5 ", baglanti);
-        //    komut.Parameters.AddWithValue("@p1", TxtAd.Text);
-        //    komut.Parameters.AddWithValue("@p2", TxtTur.Text);
-        //    komut.Parameters.AddWithValue("@p3", TxtPuan.Text);
-        //    komut.Parameters.AddWithValue("@p4", TxtKategori.Text);
-        //    komut.Parameters.AddWithValue("@p5", TxtResimPath.Text);
-        //    komut.ExecuteNonQuery();
-        //    baglanti.Close();
-        //    MessageBox.Show("Kayıt Güncellendi");
-        //}
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+
+        }
 
         private void verileriGetir_Click(object sender, EventArgs e)
         {
-            baglanti.Open();
-            SqlCommand komut = new SqlCommand("Select * from Filmler where FilmId = @p1", baglanti);
-            komut.Parameters.AddWithValue("@p1", TxtId.Text);
-            SqlDataAdapter da = new SqlDataAdapter(komut);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            foreach (DataRow dr in dt.Rows)
+            if (btnGirisYap.Enabled)
             {
-                TxtAd.Text = dr["FilmAd"].ToString();
-                TxtTur.Text = dr["Tur"].ToString();
-                TxtPuan.Text = dr["FilmPuan"].ToString();
-                TxtKategori.Text = dr["FilmKategori"].ToString();
-                TxtResimPath.Text = dr["FilmResim"].ToString();
+                baglanti.Open();
+                SqlCommand komut = new SqlCommand("Select * from Filmler where FilmId = @p1", baglanti);
+                komut.Parameters.AddWithValue("@p1", TxtId.Text);
+                SqlDataAdapter da = new SqlDataAdapter(komut);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                foreach (DataRow dr in dt.Rows)
+                {
+                    TxtAd.Text = dr["FilmAd"].ToString();
+                    TxtTur.Text = dr["Tur"].ToString();
+                    TxtPuan.Text = dr["FilmPuan"].ToString();
+                    TxtKategori.Text = dr["FilmKategori"].ToString();
+                    TxtResimPath.Text = dr["FilmResim"].ToString();
+                    pictureBox1.ImageLocation = TxtResimPath.Text;
+                }
+                baglanti.Close();
             }
-            baglanti.Close();
+            else
+            {
+                MessageBox.Show("Giriş Yapınız");
+            }
+
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -102,7 +109,38 @@ namespace SaveTheImageToDatabase
 
         private void guncelle_Click(object sender, EventArgs e)
         {
+            if (btnGirisYap.Enabled)
+            {
+                SqlCommand komut = new SqlCommand("Update Filmler Set FilmAd = @p1,Tur = @p2, FilmPuan=@p3, FilmKategori=@p4 ,FilmResim = @p5 ", baglanti);
+                komut.Parameters.AddWithValue("@p1", TxtAd.Text);
+                komut.Parameters.AddWithValue("@p2", TxtTur.Text);
+                komut.Parameters.AddWithValue("@p3", TxtPuan.Text);
+                komut.Parameters.AddWithValue("@p4", TxtKategori.Text);
+                komut.Parameters.AddWithValue("@p5", TxtResimPath.Text);
+                komut.ExecuteNonQuery();
+                baglanti.Close();
+                MessageBox.Show("Kayıt Güncellendi");
+            }
+            else
+            {
+                MessageBox.Show("Giriş yapınız");
+            }
+        }
 
+        private void btnGirisYap_Click_1(object sender, EventArgs e)
+        {
+            string kullaniciAdi = txtKullaniciAdi.Text;
+            string parola = txtParola.Text;
+            if (kullaniciAdi == "" && parola == "")
+            {
+                MessageBox.Show("enable");
+                MessageBox.Show("Giriş Yapılmadı");
+            }
+            else
+            {
+                btnGirisYap.Enabled = true; ;
+                MessageBox.Show("Giriş yapıldı");
+            }
         }
     }
 }
