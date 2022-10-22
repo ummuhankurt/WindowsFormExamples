@@ -71,6 +71,7 @@ namespace SaveTheImageToDatabase
         {
             if (btnGirisYap.Enabled)
             {
+
                 baglanti.Open();
                 SqlCommand komut = new SqlCommand("Select * from Filmler where FilmId = @p1", baglanti);
                 komut.Parameters.AddWithValue("@p1", TxtId.Text);
