@@ -36,37 +36,31 @@ namespace DatabaseDictionaryApplication
         {
             //textBox2.Text = listBox1.SelectedItem.ToString();
 
+            //baglanti.Open();
+
+            //OleDbCommand komut = new OleDbCommand("Select ingilizce from sozluk where turkce = @p2", baglanti);
+            //komut.Parameters.AddWithValue("@p2", listBox1.SelectedItem);
+            //OleDbDataReader dr = komut.ExecuteReader();
+            //while (dr.Read())
+            //{
+            //    textBox1.Text = dr[0].ToString();
+            //}
+            //baglanti.Close();
+            textBox1.Text = listBox1.SelectedItem.ToString();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
             baglanti.Open();
-            OleDbCommand komut = new OleDbCommand("Select turkce from sozluk where ingilizce = @p1", baglanti);
-            komut.Parameters.AddWithValue("@p1", listBox1.SelectedItem);
+            OleDbCommand komut = new OleDbCommand("Select ingilizce from sozluk where ingilizce like '" + textBox1.Text + "%'", baglanti);
             OleDbDataReader dr = komut.ExecuteReader();
             while (dr.Read())
             {
-                textBox2.Text = dr[0].ToString();
-            }
-
-            OleDbCommand komut2 = new OleDbCommand("Select ingilizce from sozluk where turkce = @p2", baglanti);
-            komut2.Parameters.AddWithValue("@p2", listBox1.SelectedItem);
-            OleDbDataReader dr2 = komut2.ExecuteReader();
-            while (dr.Read())
-            {
-                textBox1.Text = dr2[0].ToString();
+                listBox1.Items.Add(dr[0]).ToString();
             }
             baglanti.Close();
         }
-
-        //private void textBox1_TextChanged(object sender, EventArgs e)
-        //{
-        //    listBox1.Items.Clear();
-        //    baglanti.Open();
-        //    OleDbCommand komut = new OleDbCommand("Select ingilizce from sozluk where ingilizce like '" + textBox1.Text + "%'", baglanti);
-        //    OleDbDataReader dr = komut.ExecuteReader();
-        //    while (dr.Read())
-        //    {
-        //        listBox1.Items.Add(dr[0]).ToString();
-        //    }
-        //    baglanti.Close();
-        //}
 
         private void button1_Click(object sender, EventArgs e)
         {
