@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RelatedTables", "RelatedTab
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseDictionaryApplication", "DatabaseDictionaryApplication\DatabaseDictionaryApplication.csproj", "{14A93F0B-F3DB-4DC2-B564-6BE94DF29893}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Translate", "Translate\Translate.csproj", "{A8C08FD7-75AC-4A61-B154-F5B20850718A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{14A93F0B-F3DB-4DC2-B564-6BE94DF29893}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14A93F0B-F3DB-4DC2-B564-6BE94DF29893}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14A93F0B-F3DB-4DC2-B564-6BE94DF29893}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8C08FD7-75AC-4A61-B154-F5B20850718A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8C08FD7-75AC-4A61-B154-F5B20850718A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8C08FD7-75AC-4A61-B154-F5B20850718A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8C08FD7-75AC-4A61-B154-F5B20850718A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
