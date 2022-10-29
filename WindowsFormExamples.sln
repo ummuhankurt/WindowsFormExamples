@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseDictionaryApplicati
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Translate", "Translate\Translate.csproj", "{A8C08FD7-75AC-4A61-B154-F5B20850718A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConditionalColoringWithDataGridView", "ConditionalColoringWithDataGridView\ConditionalColoringWithDataGridView.csproj", "{164C4FDF-D143-44F1-81A7-084E5D4A9B92}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{A8C08FD7-75AC-4A61-B154-F5B20850718A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8C08FD7-75AC-4A61-B154-F5B20850718A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8C08FD7-75AC-4A61-B154-F5B20850718A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{164C4FDF-D143-44F1-81A7-084E5D4A9B92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{164C4FDF-D143-44F1-81A7-084E5D4A9B92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{164C4FDF-D143-44F1-81A7-084E5D4A9B92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{164C4FDF-D143-44F1-81A7-084E5D4A9B92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
