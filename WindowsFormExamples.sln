@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaptureaNewsHeadlinefromHü
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaesarEncryption", "CaesarEncryption\CaesarEncryption.csproj", "{52C1711D-4A1B-469A-BF09-AC7ABB19221B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PreventRepetitiveRecording", "PreventRepetitiveRecording\PreventRepetitiveRecording.csproj", "{D7360A2F-3E9C-4CBA-9077-15F69C4F48BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{52C1711D-4A1B-469A-BF09-AC7ABB19221B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52C1711D-4A1B-469A-BF09-AC7ABB19221B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52C1711D-4A1B-469A-BF09-AC7ABB19221B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7360A2F-3E9C-4CBA-9077-15F69C4F48BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7360A2F-3E9C-4CBA-9077-15F69C4F48BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7360A2F-3E9C-4CBA-9077-15F69C4F48BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7360A2F-3E9C-4CBA-9077-15F69C4F48BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
