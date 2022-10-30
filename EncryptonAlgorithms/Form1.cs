@@ -21,14 +21,13 @@ namespace EncryptonAlgorithms
         {
             string anaMetin = textBox1.Text;
             byte[] veriDizisi = ASCIIEncoding.ASCII.GetBytes(anaMetin); // ana metni byte olarak al.
-            string sifreliMetin = Convert.ToBase64String(veriDizisi); // byte formatındaki diziyi şifreler.
+            string sifreliMetin = Convert.ToBase64String(veriDizisi); // byte formatındaki diziyi string olarak şifreler.
             textBox2.Text = sifreliMetin;
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             string sifrelenmisMetin = textBox2.Text;
-            byte[] cozulenVeriDizi = Convert.FromBase64String(sifrelenmisMetin); // sifrelenmişi byte olarak çöz.
+            byte[] cozulenVeriDizi = Convert.FromBase64String(sifrelenmisMetin); // sifrelenmiş stringi byte olarak çöz.
             string anaMetin = ASCIIEncoding.ASCII.GetString(cozulenVeriDizi); // byte olarak çözülen veriyi string formatında al.
             textBox1.Text = anaMetin;
 

@@ -29,6 +29,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Translate", "Translate\Tran
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConditionalColoringWithDataGridView", "ConditionalColoringWithDataGridView\ConditionalColoringWithDataGridView.csproj", "{164C4FDF-D143-44F1-81A7-084E5D4A9B92}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaptureaNewsHeadlinefromHürriyet", "CaptureaNewsHeadlinefromHürriyet\CaptureaNewsHeadlinefromHürriyet.csproj", "{59B3DD8F-48E9-41AC-804F-D68B6D965779}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaesarEncryption", "CaesarEncryption\CaesarEncryption.csproj", "{52C1711D-4A1B-469A-BF09-AC7ABB19221B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +91,14 @@ Global
 		{164C4FDF-D143-44F1-81A7-084E5D4A9B92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{164C4FDF-D143-44F1-81A7-084E5D4A9B92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{164C4FDF-D143-44F1-81A7-084E5D4A9B92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59B3DD8F-48E9-41AC-804F-D68B6D965779}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59B3DD8F-48E9-41AC-804F-D68B6D965779}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59B3DD8F-48E9-41AC-804F-D68B6D965779}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59B3DD8F-48E9-41AC-804F-D68B6D965779}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52C1711D-4A1B-469A-BF09-AC7ABB19221B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52C1711D-4A1B-469A-BF09-AC7ABB19221B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52C1711D-4A1B-469A-BF09-AC7ABB19221B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52C1711D-4A1B-469A-BF09-AC7ABB19221B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
