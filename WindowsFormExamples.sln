@@ -45,6 +45,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegates2", "Delegates2\De
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Events", "Events\Events.csproj", "{12458861-1C06-443C-A493-E3F16E2E12F4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OverLoading", "OverLoading\OverLoading.csproj", "{6D1B14B0-89AA-404B-ACED-22D1292F54F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFrameworkModelFirst", "EntityFrameworkModelFirst\EntityFrameworkModelFirst.csproj", "{5C3D8DF5-A3A9-445E-BEAC-96C15F501D18}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -135,6 +139,14 @@ Global
 		{12458861-1C06-443C-A493-E3F16E2E12F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12458861-1C06-443C-A493-E3F16E2E12F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12458861-1C06-443C-A493-E3F16E2E12F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D1B14B0-89AA-404B-ACED-22D1292F54F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D1B14B0-89AA-404B-ACED-22D1292F54F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D1B14B0-89AA-404B-ACED-22D1292F54F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D1B14B0-89AA-404B-ACED-22D1292F54F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C3D8DF5-A3A9-445E-BEAC-96C15F501D18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C3D8DF5-A3A9-445E-BEAC-96C15F501D18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C3D8DF5-A3A9-445E-BEAC-96C15F501D18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C3D8DF5-A3A9-445E-BEAC-96C15F501D18}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

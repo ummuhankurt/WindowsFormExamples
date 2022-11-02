@@ -34,7 +34,7 @@ namespace Events
             {
                 this.BackColor = Color.LightYellow;
             }
-            if(textBox1.Text == "mavi")
+            if (textBox1.Text == "mavi")
             {
                 this.BackColor = Color.LightBlue;
             }
