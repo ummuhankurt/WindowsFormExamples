@@ -53,5 +53,10 @@ namespace Delegates
             //listBox1.Items.Add(carpim(10, 5));
             //listBox1.Items.Add(bolum(10, 5));
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
