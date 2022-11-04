@@ -19,7 +19,7 @@ namespace JoinOperation
         SqlConnection baglanti = new SqlConnection(@"Data Source=.;Initial Catalog=OrnekDatabase;Integrated Security=True");
 
         void Listele()
-        {
+        {  
             SqlDataAdapter da = new SqlDataAdapter("Execute Liste1",baglanti);
             DataTable dt = new DataTable();
             da.Fill(dt);
