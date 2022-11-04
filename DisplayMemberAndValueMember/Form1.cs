@@ -17,17 +17,23 @@ namespace DisplayMemberAndValueMember
         {
             InitializeComponent();
         }
-
+        SqlConnection baglanti = new SqlConnection(@"Data Source=.;Initial Catalog=OrnekDatabase;Integrated Security=True");
         private void button1_Click(object sender, EventArgs e)
         {
-            
 
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("insert into Hareketler (Urun,Musteri,Personel) values (@p1,@p2,@p3)", baglanti);
+            komut.Parameters.AddWithValue("@p1", comboBox1.SelectedValue); // SelectedValue : int.
+            komut.Parameters.AddWithValue("@p2", comboBox2.SelectedValue);
+            komut.Parameters.AddWithValue("@p3", comboBox3.SelectedValue);
+            komut.ExecuteNonQuery();
+            MessageBox.Show("Eklendi");
+            baglanti.Close();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             // ürünleri çekme
-            SqlConnection baglanti = new SqlConnection(@"Data Source=.;Initial Catalog=OrnekDatabase;Integrated Security=True");
             SqlCommand komut = new SqlCommand("Select * from Urunler", baglanti);
             SqlDataAdapter da = new SqlDataAdapter(komut);
             DataTable dt = new DataTable();
@@ -43,6 +49,14 @@ namespace DisplayMemberAndValueMember
             comboBox2.ValueMember = "MusteriId";
             comboBox2.DisplayMember = "MusteriAd";
             comboBox2.DataSource = dt2;
+
+            SqlCommand komut3 = new SqlCommand("Select * from Personeller", baglanti);
+            SqlDataAdapter da3 = new SqlDataAdapter(komut3);
+            DataTable dt3 = new DataTable();
+            da3.Fill(dt3);
+            comboBox3.ValueMember = "PersonelId";
+            comboBox3.DisplayMember = "PersonelAd";
+            comboBox3.DataSource = dt3;
         }
     }
 }
