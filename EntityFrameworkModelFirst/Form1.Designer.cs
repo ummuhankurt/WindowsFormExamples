@@ -35,7 +35,7 @@ namespace EntityFrameworkModelFirst
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.txtAd = new System.Windows.Forms.TextBox();
             this.txtSoyad = new System.Windows.Forms.TextBox();
             this.txtSehir = new System.Windows.Forms.TextBox();
@@ -109,12 +109,12 @@ namespace EntityFrameworkModelFirst
             this.label6.TabIndex = 5;
             this.label6.Text = "Medeni Hal : ";
             // 
-            // textBox1
+            // txtId
             // 
-            this.textBox1.Location = new System.Drawing.Point(178, 24);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(153, 26);
-            this.textBox1.TabIndex = 6;
+            this.txtId.Location = new System.Drawing.Point(178, 24);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(153, 26);
+            this.txtId.TabIndex = 6;
             // 
             // txtAd
             // 
@@ -179,6 +179,7 @@ namespace EntityFrameworkModelFirst
             this.btnSil.TabIndex = 14;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnGuncelle
             // 
@@ -188,6 +189,7 @@ namespace EntityFrameworkModelFirst
             this.btnGuncelle.TabIndex = 15;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // dataGridView1
             // 
@@ -196,6 +198,7 @@ namespace EntityFrameworkModelFirst
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(571, 239);
             this.dataGridView1.TabIndex = 16;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Form1
             // 
@@ -212,7 +215,7 @@ namespace EntityFrameworkModelFirst
             this.Controls.Add(this.txtSehir);
             this.Controls.Add(this.txtSoyad);
             this.Controls.Add(this.txtAd);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -238,7 +241,7 @@ namespace EntityFrameworkModelFirst
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TextBox txtAd;
         private System.Windows.Forms.TextBox txtSoyad;
         private System.Windows.Forms.TextBox txtSehir;
