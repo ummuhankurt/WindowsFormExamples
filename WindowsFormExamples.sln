@@ -61,6 +61,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateQRCode", "CreateQRCod
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateBarcode", "CreateBarcode\CreateBarcode.csproj", "{7C309589-C979-4B18-83D7-F4DE3F29544F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VoiceTextProcessing", "VoiceTextProcessing\VoiceTextProcessing.csproj", "{42875C50-B008-4C87-97D7-9F705E5F983C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -183,6 +185,10 @@ Global
 		{7C309589-C979-4B18-83D7-F4DE3F29544F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C309589-C979-4B18-83D7-F4DE3F29544F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C309589-C979-4B18-83D7-F4DE3F29544F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42875C50-B008-4C87-97D7-9F705E5F983C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42875C50-B008-4C87-97D7-9F705E5F983C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42875C50-B008-4C87-97D7-9F705E5F983C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42875C50-B008-4C87-97D7-9F705E5F983C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
