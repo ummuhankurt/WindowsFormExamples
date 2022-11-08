@@ -16,7 +16,7 @@ namespace EntityFrameworkModelFirst
         {
             InitializeComponent();
         }
-        PersonellerEntities personellerEntities = new PersonellerEntities();
+        PersonellerEntities1 personellerEntities = new PersonellerEntities1();
         private void Form1_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = personellerEntities.PerInformations.ToList();

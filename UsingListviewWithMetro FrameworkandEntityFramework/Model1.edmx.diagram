@@ -4,7 +4,8 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="74bb6047298b45a4ac4ef8dc984aca03" Name="Diagram1">
+      <Diagram DiagramId="a19916585dcf42fd8364479a64da7286" Name="Diagram1">
+        <EntityTypeShape EntityType="OrnekDatabaseModel.Musteriler" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
