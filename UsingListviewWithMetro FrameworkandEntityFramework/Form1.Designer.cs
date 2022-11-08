@@ -45,12 +45,14 @@ namespace UsingListviewWithMetro_FrameworkandEntityFramework
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5});
+            this.metroListView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroListView1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.metroListView1.FullRowSelect = true;
-            this.metroListView1.Location = new System.Drawing.Point(24, 74);
+            this.metroListView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+            this.metroListView1.Location = new System.Drawing.Point(20, 60);
             this.metroListView1.Name = "metroListView1";
             this.metroListView1.OwnerDraw = true;
-            this.metroListView1.Size = new System.Drawing.Size(736, 269);
+            this.metroListView1.Size = new System.Drawing.Size(747, 296);
             this.metroListView1.TabIndex = 0;
             this.metroListView1.UseCompatibleStateImageBehavior = false;
             this.metroListView1.UseSelectable = true;

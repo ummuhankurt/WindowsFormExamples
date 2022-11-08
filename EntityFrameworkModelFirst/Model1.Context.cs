@@ -13,10 +13,10 @@ namespace EntityFrameworkModelFirst
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class OrnekDatabaseEntities : DbContext
+    public partial class PersonellerEntities : DbContext
     {
-        public OrnekDatabaseEntities()
-            : base("name=OrnekDatabaseEntities")
+        public PersonellerEntities()
+            : base("name=PersonellerEntities")
         {
         }
     
@@ -25,5 +25,6 @@ namespace EntityFrameworkModelFirst
             throw new UnintentionalCodeFirstException();
         }
     
+        public DbSet<PerInformation> PerInformations { get; set; }
     }
 }

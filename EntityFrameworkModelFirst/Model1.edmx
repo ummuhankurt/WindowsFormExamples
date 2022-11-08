@@ -4,22 +4,61 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="OrnekDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityContainer Name="OrnekDatabaseModelStoreContainer">
+      <Schema Namespace="PersonellerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="PerInformation">
+          <Key>
+            <PropertyRef Name="PerId" />
+          </Key>
+          <Property Name="PerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PerAd" Type="varchar" MaxLength="20" />
+          <Property Name="PerSoyad" Type="varchar" MaxLength="20" />
+          <Property Name="PerSehir" Type="varchar" MaxLength="20" />
+          <Property Name="PerMaas" Type="int" />
+          <Property Name="PerDurum" Type="bit" />
+          <Property Name="PerYas" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityContainer Name="PersonellerModelStoreContainer">
+          <EntitySet Name="PerInformation" EntityType="Self.PerInformation" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="OrnekDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="OrnekDatabaseEntities" annotation:LazyLoadingEnabled="true">
+      <Schema Namespace="PersonellerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="PerInformation">
+          <Key>
+            <PropertyRef Name="PerId" />
+          </Key>
+          <Property Name="PerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PerAd" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="PerSoyad" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="PerSehir" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="PerMaas" Type="Int32" />
+          <Property Name="PerDurum" Type="Boolean" />
+          <Property Name="PerYas" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="PersonellerEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="PerInformations" EntityType="Self.PerInformation" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="OrnekDatabaseModelStoreContainer" CdmEntityContainer="OrnekDatabaseEntities">
+        <EntityContainerMapping StorageEntityContainer="PersonellerModelStoreContainer" CdmEntityContainer="PersonellerEntities">
+          <EntitySetMapping Name="PerInformations">
+            <EntityTypeMapping TypeName="PersonellerModel.PerInformation">
+              <MappingFragment StoreEntitySet="PerInformation">
+                <ScalarProperty Name="PerId" ColumnName="PerId" />
+                <ScalarProperty Name="PerAd" ColumnName="PerAd" />
+                <ScalarProperty Name="PerSoyad" ColumnName="PerSoyad" />
+                <ScalarProperty Name="PerSehir" ColumnName="PerSehir" />
+                <ScalarProperty Name="PerMaas" ColumnName="PerMaas" />
+                <ScalarProperty Name="PerDurum" ColumnName="PerDurum" />
+                <ScalarProperty Name="PerYas" ColumnName="PerYas" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
